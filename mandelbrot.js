@@ -7,7 +7,7 @@ window.onload = function firstInit() {
 
   let imageData = context.createImageData(width, height);
 
-  let maxIterations = 1000;
+  let maxIterations = 600;
   let palette = [];
 
   let xOffset = -width / 2;

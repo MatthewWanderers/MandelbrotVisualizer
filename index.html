@@ -2,12 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fractal Visualization</title>
+    <title>Mandelbrot Set</title>
     <script type="text/javascript" src="./pixeldrawing.js"></script>
     <script type="text/javascript" src="./mandelbrot.js"></script>
+    <link rel="stylesheet" href="./main.css">
   </head>
   <body>
-    <canvas id="canvas" width="720" height="720"></canvas>
-    <canvas id="canvas1" width="640" height="640"></canvas>
+    <header>
+      <h1 class="title">Mandlebrot Set Visualization</h1>
+    </header>
+    <section class="main-container">
+
+    <article class="directions-container">
+      <ul>
+        To navigate the visualization:
+        <li>Click to zoom the image.</li>
+          <li>
+            Shift + click to pan.
+          </li>
+          <li>
+            Ctrl + click to zoom out.
+          </li>
+      </p>
+      <p>
+        The mandelbrot set is colored here in black.
+        For more information about the Mandelbrot set, see <link href="https://simple.wikipedia.org/wiki/Mandelbrot_set">This Wikipedia page</link>.
+        The colored points in the image are not actually part of the set, but help visualize it.
+        In this visualization, points increase in brightness as they get closer and closer to the set, so we can zoom in and follow the patterns to find points that do fall in the set.
+        Points in the set have a definite end when they are applied to the equation, but points out of the set will go towards infinity.
+
+      </p>
+      <p>
+        This visualization iterates 1000 times. The largest visualizations can take dedicated servers months to calculate. Many of those visualizations can be found on Youtube.
+        Written in JavaScript.
+      </p>
+    </article>
+    <div class="canvas-container">
+      <canvas id="canvas" width="720" height="720"></canvas>
+    </div>
+    </section>
+    <footer></footer>
   </body>
 </html>

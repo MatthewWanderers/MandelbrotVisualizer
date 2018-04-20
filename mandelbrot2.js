@@ -1,5 +1,5 @@
-window.onload = function firstInit() {
-  let canvas = document.getElementById("canvas");
+window.onload = function secondInit() {
+  let canvas = document.getElementById("canvas1");
   let context = canvas.getContext("2d");
 
   let width = canvas.width;
@@ -7,7 +7,7 @@ window.onload = function firstInit() {
 
   let imageData = context.createImageData(width, height);
 
-  let maxIterations = 1000;
+  let maxIterations = 10;
   let palette = [];
 
   let xOffset = -width / 2;
@@ -39,16 +39,19 @@ window.onload = function firstInit() {
       palette[i] = { r: rOffset, g: gOffset, b: bOffset };
 
       if (i < 45) {
-        bOffset += 6;
-        gOffset -= 1;
-        rOffset -= 1;
-      } else if (i < 180) {
-        gOffset += 3;
-        bOffset -= 7;
-      } else if (i < 256) {
-        rOffset += 1;
+        bOffset += 2;
+      } else if (i < 80) {
+        gOffset += 1;
+        bOffset -= 2;
+      } else if (i < 120) {
+        gOffset += 1;
+        rOffset -= 2;
+      } else if (i < 192) {
+        rOffset += 2;
+        gOffset -= 2;
         bOffset += 1;
-        gOffset -= 5;
+      } else if (i < 224) {
+        rOffset += 5;
 
       }
     }
@@ -111,7 +114,6 @@ window.onload = function firstInit() {
 
 
   function onMouseDown(e) {
-    e.preventDefault;
     const pos = getMousePos(canvas, e);
 
     let zoomIn = true;

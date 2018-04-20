@@ -1,0 +1,63 @@
+
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* start styling */
+
+body {
+  font-family: "Hevetica", sans-serif;
+  background: #B4B6BF;
+}
+
+header {
+  border-bottom: 1px solid black;
+
+}
+
+.title {
+  font-size: 36px;
+  display: block;
+  text-align: center;
+}
+
+
+.main-container {
+  display: flex;
+  background: #454961;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 36px;
+  justify-content: space-around;
+  border-radius: 26px;
+  overflow: hidden;
+  max-width: 1400px;
+  align-self: center;
+
+}
+.directions-container {
+  font-size: 16px;
+  color: #C3C4CB;
+  min-width: 180px;
+  max-width: 400px;
+
+}
+
+.canvas-container {
+  overflow: hidden;
+}
+
+.directions-container li {
+  margin: 10px;
+  list-style-type: none;
+}
+
+canvas {
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  border: 2px solid black;
+  /* max-width: 70% */
+}

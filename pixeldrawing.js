@@ -1,5 +1,5 @@
 window.onload = function() {
-  const canvas = document.getElementById("canvas1");
+  const canvas = document.getElementById("canvasOne");
   const context = canvas.getContext("2d");
 
   const width = canvas.width;
